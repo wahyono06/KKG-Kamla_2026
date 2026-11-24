@@ -4,192 +4,402 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal Digital Guru SD</title>
+<title>Portal Digital Guru SD | KKG KAMLA</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
 body{
- font-family:Arial,sans-serif;
- background:#f1f5f9;
- color:#1e293b;
- min-height:100vh;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(135deg,#eef4fb,#f8fafc);
+  color:#1e293b;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
 }
+
+/* HEADER */
 .hero{
- background:linear-gradient(135deg,#102d50,#164e91,#2563eb);
- color:white;
- padding:55px 20px 75px;
- text-align:center;
- position:relative;
- overflow:hidden;
+  background:linear-gradient(135deg,#102d50,#164e91,#2563eb);
+  color:white;
+  text-align:center;
+  padding:28px 20px 48px;
+  position:relative;
+  overflow:hidden;
 }
-.hero:before,.hero:after{
- content:"";
- position:absolute;
- border-radius:50%;
- background:#ffffff12;
+
+.hero:before,
+.hero:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  background:#ffffff12;
 }
-.hero:before{width:250px;height:250px;top:-120px;left:-70px}
-.hero:after{width:300px;height:300px;bottom:-210px;right:-70px}
-.logo{font-size:48px;margin-bottom:15px}
+
+.hero:before{
+  width:250px;
+  height:250px;
+  top:-140px;
+  left:-70px;
+}
+
+.hero:after{
+  width:300px;
+  height:300px;
+  bottom:-220px;
+  right:-80px;
+}
+
+.hero-content{
+  position:relative;
+  z-index:1;
+}
+
+.logo{
+  font-size:42px;
+  margin-bottom:8px;
+}
+
 .hero h1{
- font-size:clamp(26px,5vw,42px);
- margin-bottom:14px;
- letter-spacing:1px;
+  font-size:clamp(25px,4vw,38px);
+  letter-spacing:1px;
+  margin-bottom:10px;
 }
+
 .hero p{
- color:#dbeafe;
- max-width:650px;
- margin:auto;
- line-height:1.7;
- font-size:15px;
+  color:#dbeafe;
+  max-width:650px;
+  margin:auto;
+  font-size:14px;
+  line-height:1.6;
 }
+
 .tag{
- display:inline-block;
- margin-top:22px;
- background:#ffffff20;
- border:1px solid #ffffff50;
- border-radius:30px;
- padding:9px 18px;
- font-size:12px;
- letter-spacing:1px;
+  display:inline-block;
+  margin-top:15px;
+  background:#ffffff20;
+  border:1px solid #ffffff50;
+  border-radius:30px;
+  padding:8px 17px;
+  font-size:11px;
+  letter-spacing:1px;
 }
+
+/* MAIN */
 .container{
- max-width:1000px;
- margin:-35px auto 0;
- padding:0 20px 40px;
- position:relative;
+  width:100%;
+  max-width:950px;
+  margin:-28px auto 0;
+  padding:0 20px 10px;
+  position:relative;
+  flex:1;
 }
-.heading{text-align:center;margin-bottom:25px}
-.heading h2{font-size:24px;margin-bottom:8px}
-.heading p{font-size:14px;color:#64748b}
+
+.heading{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.heading h2{
+  font-size:23px;
+  margin-bottom:6px;
+}
+
+.heading p{
+  font-size:13px;
+  color:#64748b;
+}
+
+/* CARDS */
 .cards{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
- gap:22px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
 }
+
 .card{
- background:white;
- border-radius:20px;
- padding:28px;
- box-shadow:0 10px 35px #0f172a12;
- border:1px solid #e2e8f0;
- transition:.3s;
+  background:white;
+  border-radius:18px;
+  padding:23px;
+  box-shadow:0 10px 30px #0f172a12;
+  border:1px solid #e2e8f0;
+  transition:all .3s ease;
 }
+
 .card:hover{
- transform:translateY(-6px);
- box-shadow:0 16px 40px #0f172a20;
+  transform:translateY(-5px);
+  box-shadow:0 16px 35px #0f172a20;
 }
+
 .card-icon{
- width:65px;height:65px;
- border-radius:18px;
- display:grid;place-items:center;
- font-size:32px;
- margin-bottom:20px;
+  width:58px;
+  height:58px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  font-size:29px;
+  margin-bottom:14px;
 }
-.mpi .card-icon{background:#d1fae5}
-.rpm .card-icon{background:#dbeafe}
-.card h3{font-size:21px;margin-bottom:10px}
+
+.mpi .card-icon{
+  background:#d1fae5;
+}
+
+.rpm .card-icon{
+  background:#dbeafe;
+}
+
+.card h3{
+  font-size:21px;
+  margin-bottom:9px;
+}
+
 .card p{
- color:#64748b;
- font-size:14px;
- line-height:1.7;
- min-height:48px;
+  color:#64748b;
+  font-size:13px;
+  line-height:1.6;
+  min-height:42px;
 }
+
 .button{
- display:block;
- text-align:center;
- color:white;
- text-decoration:none;
- padding:14px;
- margin-top:22px;
- border-radius:11px;
- font-weight:bold;
- font-size:13px;
- transition:.2s;
+  display:block;
+  text-align:center;
+  color:white;
+  text-decoration:none;
+  padding:13px;
+  margin-top:17px;
+  border-radius:10px;
+  font-weight:bold;
+  font-size:12px;
+  transition:.2s;
 }
-.button:hover{filter:brightness(1.1)}
-.mpi .button{background:#059669}
-.rpm .button{background:#2563eb}
+
+.button:hover{
+  filter:brightness(1.1);
+  transform:scale(1.02);
+}
+
+.mpi .button{
+  background:#059669;
+}
+
+.rpm .button{
+  background:#2563eb;
+}
+
+/* INFORMASI */
 .info{
- margin-top:28px;
- background:#eaf2ff;
- border:1px solid #d5e4ff;
- padding:20px;
- border-radius:15px;
- text-align:center;
- color:#31527c;
- font-size:13px;
- line-height:1.7;
+  margin-top:20px;
+  background:#eaf2ff;
+  border:1px solid #d5e4ff;
+  padding:15px;
+  border-radius:13px;
+  text-align:center;
+  color:#31527c;
+  font-size:12px;
+  line-height:1.6;
 }
+
+/* FOOTER */
 footer{
- text-align:center;
- padding:25px 15px;
- color:#64748b;
- font-size:12px;
- line-height:1.8;
+  text-align:center;
+  padding:13px 15px;
+  color:#64748b;
+  font-size:11px;
+  line-height:1.7;
+}
+
+/* RESPONSIVE HP */
+@media(max-width:600px){
+
+  .hero{
+    padding:22px 15px 38px;
+  }
+
+  .logo{
+    font-size:35px;
+    margin-bottom:7px;
+  }
+
+  .hero h1{
+    font-size:24px;
+  }
+
+  .hero p{
+    font-size:12px;
+    line-height:1.5;
+  }
+
+  .tag{
+    margin-top:12px;
+    padding:7px 13px;
+    font-size:10px;
+  }
+
+  .container{
+    padding:0 13px 8px;
+  }
+
+  .heading{
+    margin-bottom:15px;
+  }
+
+  .heading h2{
+    font-size:19px;
+  }
+
+  .heading p{
+    font-size:11px;
+  }
+
+  .cards{
+    gap:11px;
+  }
+
+  .card{
+    padding:14px 11px;
+    border-radius:14px;
+  }
+
+  .card-icon{
+    width:43px;
+    height:43px;
+    font-size:23px;
+    margin-bottom:9px;
+  }
+
+  .card h3{
+    font-size:16px;
+  }
+
+  .card p{
+    font-size:11px;
+    min-height:55px;
+  }
+
+  .button{
+    padding:11px 5px;
+    margin-top:12px;
+    font-size:10px;
+  }
+
+  .info{
+    margin-top:13px;
+    padding:11px;
+    font-size:10px;
+  }
+
+  footer{
+    padding:9px;
+    font-size:10px;
+  }
+}
+
+/* LAYAR PENDEK */
+@media(max-height:750px) and (min-width:601px){
+  .hero{
+    padding:18px 20px 38px;
+  }
+  .logo{font-size:34px}
+  .container{margin-top:-23px}
+  .card{padding:17px}
+  .info{margin-top:12px;padding:11px}
+  footer{padding:8px}
 }
 </style>
 </head>
+
 <body>
 
 <header class="hero">
- <div class="logo">🎓</div>
- <h1>PORTAL DIGITAL GURU SD</h1>
- <p>
-  Selamat datang di pusat alat bantu pembelajaran digital.
-  Mari berkreasi dan menciptakan pembelajaran yang lebih
-  menarik, bermakna, dan menyenangkan.
- </p>
- <div class="tag">✨ KREATIF • INOVATIF • INSPIRATIF</div>
+  <div class="hero-content">
+
+    <div class="logo">🎓</div>
+
+    <h1>PORTAL DIGITAL GURU SD</h1>
+
+    <p>
+      Selamat datang di pusat alat bantu pembelajaran digital.
+      Mari berkreasi dan menciptakan pembelajaran yang lebih
+      menarik, bermakna, dan menyenangkan.
+    </p>
+
+    <div class="tag">
+      ✨ KREATIF • INOVATIF • INSPIRATIF
+    </div>
+
+  </div>
 </header>
 
 <main class="container">
- <div class="heading">
-  <h2>Pilih Aplikasi Anda</h2>
-  <p>Silakan pilih alat bantu yang ingin digunakan.</p>
- </div>
 
- <section class="cards">
+  <div class="heading">
+    <h2>Pilih Aplikasi Anda</h2>
+    <p>Silakan pilih alat bantu pembelajaran yang ingin digunakan.</p>
+  </div>
 
-  <article class="card mpi">
-   <div class="card-icon">🖥️</div>
-   <h3>Generator MPI</h3>
-   <p>
-    Buat prompt Media Pembelajaran Interaktif
-    dengan pilihan tema, desain, animasi,
-    materi, dan kuis pembelajaran.
-   </p>
-   <a class="button"
-      href="generator_prompt_mpi_guru_sd.html">
-      BUKA GENERATOR MPI →
-   </a>
-  </article>
+  <section class="cards">
 
-  <article class="card rpm">
-   <div class="card-icon">📋</div>
-   <h3>Generator RPM</h3>
-   <p>
-    Susun Rencana Pembelajaran Mendalam
-    secara praktis, sistematis, dan sesuai
-    kebutuhan pembelajaran di sekolah.
-   </p>
-   <a class="button"
-      href="generator_rpm_guru_sd.html">
-      BUKA GENERATOR RPM →
-   </a>
-  </article>
+    <!-- GENERATOR MPI -->
+    <article class="card mpi">
 
- </section>
+      <div class="card-icon">🖥️</div>
 
- <div class="info">
-  💡 <strong>Ruang Kreasi Guru</strong><br>
-  Manfaatkan teknologi untuk mengembangkan
-  pembelajaran yang kreatif dan berkualitas.
- </div>
+      <h3>Generator MPI</h3>
+
+      <p>
+        Buat prompt Media Pembelajaran Interaktif
+        dengan pilihan tema, desain, animasi,
+        materi, dan kuis pembelajaran.
+      </p>
+
+      <a class="button"
+         href="generator_prompt_mpi_guru_sd.html">
+         BUKA GENERATOR MPI →
+      </a>
+
+    </article>
+
+    <!-- GENERATOR RPM -->
+    <article class="card rpm">
+
+      <div class="card-icon">📋</div>
+
+      <h3>Generator RPM</h3>
+
+      <p>
+        Susun Rencana Pembelajaran Mendalam
+        secara praktis, sistematis, dan sesuai
+        kebutuhan pembelajaran di sekolah.
+      </p>
+
+      <a class="button"
+         href="generator_rpm_guru_sd.html">
+         BUKA GENERATOR RPM →
+      </a>
+
+    </article>
+
+  </section>
+
+  <div class="info">
+    💡 <strong>RUANG KREASI GURU</strong><br>
+    Manfaatkan teknologi untuk mengembangkan
+    pembelajaran yang kreatif dan berkualitas.
+  </div>
+
 </main>
 
 <footer>
- <strong>PORTAL DIGITAL GURU SD</strong><br>
- Dikembangkan oleh <strong>Wahyono, S.Pd.SD.</strong><br>
- <strong>KKG KAMLA © 2026</strong><br>
- Media Kreasi dan Inovasi Pembelajaran
+  <strong>PORTAL DIGITAL GURU SD</strong><br>
+  Dikembangkan oleh <strong>Wahyono, S.Pd.SD.</strong><br>
+  <strong>KKG KAMLA © 2026</strong><br>
+  Media Kreasi dan Inovasi Pembelajaran
 </footer>
+
+</body>
+</html>
